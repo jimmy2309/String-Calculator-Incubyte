@@ -9,6 +9,6 @@ public class StringCalculatorTest
     void testEmptyStringReturnsZero() {
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("");
-        assertEquals("", result);  //This should pass
+        assertEquals(0, result);  //This should pass
     }
 }
