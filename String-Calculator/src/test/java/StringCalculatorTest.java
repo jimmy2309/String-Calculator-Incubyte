@@ -31,6 +31,7 @@ public class StringCalculatorTest
     void testMultipleNumbersReturnsSum() {
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("1,2,3,4");
+        System.out.println(result);
         assertEquals(10, result); // This should fail if hardcoded logic was used earlier
     }
 
