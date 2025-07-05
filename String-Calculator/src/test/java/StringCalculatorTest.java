@@ -1,7 +1,7 @@
 import org.example.StringCalculator;
 import org.junit.jupiter.api.Test;
 
-import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.*;
 
 public class StringCalculatorTest
 {
@@ -50,6 +50,17 @@ public class StringCalculatorTest
         System.out.println(result);
         assertEquals(3, result); // should fail initially
     }
+
+    @Test
+    void testNegativeNumberThrowsException() {
+        StringCalculator calc = new StringCalculator();
+        Exception exception = assertThrows(IllegalArgumentException.class, () -> {
+            calc.Add("1,-2,3");
+        });
+
+        assertTrue(exception.getMessage().contains("negatives not allowed"));
+    }
+
 
 
 
