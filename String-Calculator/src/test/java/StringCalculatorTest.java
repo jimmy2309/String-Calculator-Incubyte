@@ -65,6 +65,7 @@ public class StringCalculatorTest
     void testIgnoreNumbersGreaterThan1000() {
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("2,1001");
+        System.out.println(result);
         assertEquals(2, result);
     }
 
