@@ -23,7 +23,15 @@ public class StringCalculatorTest
     void testTwoNumbersReturnsSum() {
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("1,2");
+        System.out.println(result);
         assertEquals(3, result); // This will fail initially
+    }
+
+    @Test
+    void testMultipleNumbersReturnsSum() {
+        StringCalculator calc = new StringCalculator();
+        int result = calc.Add("1,2,3,4");
+        assertEquals(10, result); // This should fail if hardcoded logic was used earlier
     }
 
 
