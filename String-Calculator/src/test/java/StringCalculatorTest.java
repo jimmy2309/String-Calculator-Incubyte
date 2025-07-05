@@ -43,5 +43,13 @@ public class StringCalculatorTest
         assertEquals(6, result);
     }
 
+    @Test
+    void testCustomDelimiterSupport() {
+        StringCalculator calc = new StringCalculator();
+        int result = calc.Add("//;\n1;2");
+        assertEquals(3, result); // should fail initially
+    }
+
+
 
 }
