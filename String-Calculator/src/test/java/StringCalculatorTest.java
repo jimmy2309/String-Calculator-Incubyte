@@ -61,6 +61,12 @@ public class StringCalculatorTest
         assertTrue(exception.getMessage().contains("negatives not allowed"));
     }
 
+    @Test
+    void testIgnoreNumbersGreaterThan1000() {
+        StringCalculator calc = new StringCalculator();
+        int result = calc.Add("2,1001");
+        assertEquals(2, result);
+    }
 
 
 
