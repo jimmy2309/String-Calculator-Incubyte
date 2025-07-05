@@ -11,4 +11,11 @@ public class StringCalculatorTest
         int result = calc.Add("");
         assertEquals(0, result);  //This should pass
     }
+
+    @Test
+    void testSingleNumberReturnsItself() {
+        StringCalculator calc = new StringCalculator();
+        int result = calc.Add("1");
+        assertEquals(1, result);  // This should fail initially
+    }
 }
