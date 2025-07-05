@@ -47,6 +47,7 @@ public class StringCalculatorTest
     void testCustomDelimiterSupport() {
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("//;\n1;2");
+        System.out.println(result);
         assertEquals(3, result); // should fail initially
     }
 
