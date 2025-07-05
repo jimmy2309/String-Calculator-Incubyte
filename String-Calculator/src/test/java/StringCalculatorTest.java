@@ -9,14 +9,14 @@ public class StringCalculatorTest
     void testEmptyStringReturnsZero() {
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("");
-        assertEquals(0, result);  //This should pass
+        assertEquals(0, result);
     }
 
     @Test
     void testSingleNumberReturnsItself() {
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("1");
-        assertEquals(1, result);  // This should fail initially
+        assertEquals(1, result);
     }
 
     @Test
@@ -24,7 +24,7 @@ public class StringCalculatorTest
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("1,2");
         System.out.println(result);
-        assertEquals(3, result); // This will fail initially
+        assertEquals(3, result);
     }
 
     @Test
@@ -32,14 +32,15 @@ public class StringCalculatorTest
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("1,2,3,4");
         System.out.println(result);
-        assertEquals(10, result); // This should fail if hardcoded logic was used earlier
+        assertEquals(10, result);
     }
 
     @Test
     void testNewlineAsDelimiter() {
         StringCalculator calc = new StringCalculator();
         int result = calc.Add("1\n2,3");
-        assertEquals(6, result); // should fail initially
+        System.out.println(result);
+        assertEquals(6, result);
     }
 
 
