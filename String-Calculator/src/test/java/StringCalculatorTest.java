@@ -35,5 +35,12 @@ public class StringCalculatorTest
         assertEquals(10, result); // This should fail if hardcoded logic was used earlier
     }
 
+    @Test
+    void testNewlineAsDelimiter() {
+        StringCalculator calc = new StringCalculator();
+        int result = calc.Add("1\n2,3");
+        assertEquals(6, result); // should fail initially
+    }
+
 
 }
