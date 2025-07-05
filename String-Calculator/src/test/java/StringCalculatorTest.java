@@ -57,7 +57,7 @@ public class StringCalculatorTest
         Exception exception = assertThrows(IllegalArgumentException.class, () -> {
             calc.Add("1,-2,3");
         });
-
+        System.out.println(exception.getMessage());
         assertTrue(exception.getMessage().contains("negatives not allowed"));
     }
 
