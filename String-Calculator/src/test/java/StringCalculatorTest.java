@@ -69,6 +69,13 @@ public class StringCalculatorTest
         assertEquals(2, result);
     }
 
+    @Test
+    void testCustomDelimiterWithAnyLength() {
+        StringCalculator calc = new StringCalculator();
+        int result = calc.Add("//[***]\n1***2***3");
+        System.out.println(result);
+        assertEquals(6, result);
+    }
 
 
 }
