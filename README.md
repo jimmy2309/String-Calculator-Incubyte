@@ -19,5 +19,20 @@ Build a simple string-based calculator that can:
 - JUnit 5
 - Maven
 
-##  Project Structure
+
+##  Features (Implemented with TDD)
+
+1. `Add("")` → `0`
+2. `Add("1")` → `1`
+3. `Add("1,2")` → `3`
+4. Support unknown number of arguments
+5. Support newlines: `Add("1\n2,3")` → `6`
+6. Support custom delimiters: `//;\n1;2` → `3`
+7. Throw exception on negative numbers with list: `-1, -3`
+8. Ignore numbers > 1000: `Add("2,1001")` → `2`
+9. Support any-length delimiters: `Add("//[***]\n1***2***3")` → `6`
+10. Support multiple delimiters: `Add("//[*][%]\n1*2%3")` → `6`
+11. Support multiple delimiters with length > 1: `Add("//[**][%%]\n1**2%%3")` → `6`
+
+
 
