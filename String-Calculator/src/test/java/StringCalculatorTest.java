@@ -18,4 +18,13 @@ public class StringCalculatorTest
         int result = calc.Add("1");
         assertEquals(1, result);  // This should fail initially
     }
+
+    @Test
+    void testTwoNumbersReturnsSum() {
+        StringCalculator calc = new StringCalculator();
+        int result = calc.Add("1,2");
+        assertEquals(3, result); // This will fail initially
+    }
+
+
 }
